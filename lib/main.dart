@@ -24,7 +24,7 @@ class MapSampleState extends State<MapSample> {
   Completer<GoogleMapController> _controller = Completer();
 
   static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(6.465422, 3.406448),
+    target: LatLng(6.465422, 3.406448), //Location of choice
     zoom: 14.4746,
   );
 
@@ -38,7 +38,7 @@ class MapSampleState extends State<MapSample> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: GoogleMap(
-        mapType: MapType.normal,
+        mapType: MapType.normal, //how you want the map to be
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
